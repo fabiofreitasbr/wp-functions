@@ -65,7 +65,7 @@ function noticiasTag() {
             'public' => true,
             'show_ui' => true,
             'show_in_menu' => true,
-            'hierarchical' => false,
+            'hierarchical' => true,
             'show_admin_column' => true,
             'show_in_rest' => true,
             'query_var' => true,
@@ -83,7 +83,54 @@ function noticiasTag() {
 }
 add_action('init',  'noticiasTag');
 
+function classificaoSalaImprensa() {
+    $label = array(
+        'name' => 'Classificações - Sala de Imprensa',
+        'singular_name' => 'Classificação',
+        'menu_name' => 'Classificações (Sala de Imprensa)',
+        'all_items' => 'Todas as Classificações',
+        'edit_item' => 'Editar Classificação',
+        'view_item' => 'Visualizar',
+        'update_item' => 'Atualizar',
+        'add_new_item' => 'Adicionar Nova',
+        'new_item_name' => 'Novo Item',
+        'parent_item' => 'Tag Pai',
+        'parent_item_colon' => '',
+        'search_items' => '',
+        'popular_items' => '',
+        'separate_items_with_commas' => '',
+        'add_or_remove_items' => '',
+        'choose_from_most_used' => '',
+        'not_found' => ''
+    );
+    register_taxonomy(
+        'classificao-imprensa',
+        'notic-comunic',
+        array(
+            'labels' => $label,
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'hierarchical' => true,
+            'show_admin_column' => true,
+            'show_in_rest' => true,
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'noticias-e-comunicacao/classificacao' ),
+            '_builtin' => true,
+            'capabilities' => array(
+                'manage_terms' => 'manage_post_tags',
+                'edit_terms'   => 'edit_post_tags',
+                'delete_terms' => 'delete_post_tags',
+                'assign_terms' => 'assign_post_tags',
+            ),
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
+        )
+    );
+}
+add_action('init',  'classificaoSalaImprensa');
+
 function postTypeNoticiasComunicacoes() {
+
     $labels = array(
         'name'               => _x( 'Notícias e Comunicação', 'post type general name', 'your-plugin-textdomain' ),
         'singular_name'      => _x( 'Notícia ou Comunicação', 'post type singular name', 'your-plugin-textdomain' ),
@@ -109,15 +156,17 @@ function postTypeNoticiasComunicacoes() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'noticia-e-comunicacao' ),
+        'rewrite'            => array( 'slug' => 'noticias-e-comunicacao' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => true,
+        'with_front'         => false,
         'menu_position'      => 32,
         'menu_icon'          => 'dashicons-media-document',
         'supports'           => array( 'title', 'editor', 'thumbnail'),
         'taxonomies'         => array('noticcomuniccat', 'noticias-tag')
     );
+
     register_post_type('notic-comunic', $args);
     add_post_type_support( 'notic-comunic', 'wps_subtitle' );
 }

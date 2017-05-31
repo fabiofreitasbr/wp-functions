@@ -31,7 +31,7 @@ function associeseTax() {
             'show_admin_column' => true,
             'show_in_rest' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'associe-se' ),
+            'rewrite' => array( 'slug' => 'associe-se/tipo' ),
         )
     );
 }

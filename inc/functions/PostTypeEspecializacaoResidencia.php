@@ -67,6 +67,7 @@ function postTypeEspecializacaoResidencia() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => true,
+        'with_front'         => false,
         'menu_position'      => 30,
         'menu_icon'          => 'dashicons-welcome-learn-more',
         'supports'           => array( 'title', 'editor', 'thumbnail'),
@@ -76,3 +77,4 @@ function postTypeEspecializacaoResidencia() {
     add_post_type_support( 'especi-resi', 'wps_subtitle' );
 }
 add_action('init', 'postTypeEspecializacaoResidencia');
+?>

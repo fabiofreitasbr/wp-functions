@@ -31,7 +31,7 @@ function produtosServicosTax() {
             'show_admin_column' => true,
             'show_in_rest' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'produtos-e-servicos' ),
+            'rewrite' => array( 'slug' => 'produto-e-servico' )
         )
     );
 }
@@ -67,6 +67,7 @@ function postTypeProdutosServicos() {
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => true,
+        'with_front'         => false,
         'menu_position'      => 28,
         'menu_icon'          => 'dashicons-cart',
         'supports'           => array( 'title', 'editor', 'thumbnail'),

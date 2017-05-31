@@ -31,7 +31,7 @@ function institucionalTax() {
             'show_admin_column' => true,
             'show_in_rest' => true,
             'query_var' => true,
-            'rewrite' => array('slug' => 'institucional')
+            'rewrite' => array('slug' => 'institucionais'),
         )
     );
 }
@@ -69,7 +69,7 @@ function patologistasEstado() {
             'show_admin_column' => true,
             'show_in_rest' => true,
             'query_var' => true,
-            'rewrite' => array('slug' => 'patologistas-estado')
+            'rewrite' => array('slug' => 'institucional/patologistas-clinicos/estado')
         )
     );
 }
@@ -101,11 +101,12 @@ function postTypeInstitucional() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'institucional'),
+        'rewrite'            => array('slug' => 'institucional'),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => true,
-        'menu_position'      => 27,
+        'with_front'         => false,
+        'menu_position'      => 28,
         'menu_icon'          => 'dashicons-building',
         'supports'           => array( 'title', 'editor', 'thumbnail'),
         'taxonomies'         => array('institucionalcat', 'patologistas-estado')

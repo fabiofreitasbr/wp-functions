@@ -7,7 +7,7 @@ function wpTitle( $title, $sep ) {
         return $title;
  
     // Add the site name.
-    $title = get_bloginfo( 'name' ) . "$title";
+    $title = get_bloginfo( 'name' ) . " $title";
  
     // Add the site description for the home/front page.
     $site_description = get_bloginfo( 'description', 'display' );
@@ -16,7 +16,7 @@ function wpTitle( $title, $sep ) {
  
     // Add a page number if necessary.
     if ( $paged >= 2 || $page >= 2 )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'twentytwelve' ), max( $paged, $page ) );
+        $title = "$title $sep " . sprintf( __( '%s', 'twentytwelve' ), max( $paged, $page ) );
  
     return $title;
 }

@@ -31,7 +31,7 @@ function publicacoesLegislacaoTax() {
             'show_admin_column' => true,
             'show_in_rest' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'publicacoes-e-legislacao' ),
+            'rewrite' => array( 'slug' => 'publicacao-legislacao' )
         )
     );
 }
@@ -63,10 +63,11 @@ function postTypePublicacoesLesgilacao() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'publicacoes-e-legislacao' ),
+        'rewrite'            => array( 'slug' => 'publicacoes-legislacao' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => true,
+        'with_front'         => false,
         'menu_position'      => 33,
         'menu_icon'          => 'dashicons-businessman',
         'supports'           => array( 'title', 'editor', 'thumbnail'),
