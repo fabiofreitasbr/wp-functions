@@ -2,7 +2,7 @@
  // Alterar o os dados do rodapé
 function alt_admin_footer ()
 {
-    echo '<span id="footer-thankyou">Desenvolvido por <strong>Agência Campana</strong></span>';
+    echo '<span id="footer-thankyou">Desenvolvido por <strong>YXE</strong></span>';
 }
 add_filter('admin_footer_text', 'alt_admin_footer');
 
@@ -33,11 +33,11 @@ function showMessage($message, $errormsg = false)
     echo "<p><strong>$message</strong></p></div>";
 } 
  
-function showAdminMessages()
-{
-    showMessage("Esta é uma versão de homologação.", true);
-}
-add_action('admin_notices', 'showAdminMessages');
+// function showAdminMessages()
+// {
+//     showMessage("Esta é uma versão de homologação.", true);
+// }
+// add_action('admin_notices', 'showAdminMessages');
 
 // Remover editor de códigos do painel
 function remove_editor_menu() {
@@ -61,11 +61,11 @@ function wpmidia_remove_dashboard_widgets() {
         // Remove o widget "Links de entrada" (Incomming links)
         // unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);        
         // remove o widget "Plugins"
-    // unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);        
+        // unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);        
         // remove o widget "Rascunhos recentes" (Recent drafts)
-    // unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
+        // unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
         // remove o widget "QuickPress"
-    // unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+        // unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
  
         // remove o widget "Agora" (Right now)
         // unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);

@@ -1,6 +1,5 @@
 <?php 
 /*
-
 add_action('admin_menu', 'mt_add_pages');
 
 // action function for above hook
