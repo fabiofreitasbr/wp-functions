@@ -15,7 +15,7 @@
     $head->css('font-awesome');
     $head->css('font-awesome');
     $head->css('unslider');
-    $head->css(get_bloginfo('stylesheet_url'), false);
+    $head->css('style');
     ?>
     <!-- JS -->
     <?php
