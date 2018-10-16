@@ -1,5 +1,5 @@
 <?php 
-/* CARREGAR TÍTULO DAS PÁGINAS*/
+/* CARREGAR TÍTULO DAS PÁGINAS */
 function wpTitle( $title, $sep ) {
     global $paged, $page;
  
