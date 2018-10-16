@@ -5,11 +5,11 @@ get_header();
 	<div class="container d-flex flex-column flex-md-row align-items-center ">
 		<h5 class="my-0 mr-md-auto font-weight-normal navbar-brand">WP Functions</h5>
 		<nav class="my-2 my-md-0 mr-md-3">
-			<a class="p-2 navbar-brand" href="#">Início</a>
-			<a class="p-2 navbar-brand" href="#">Documentação</a>
-			<a class="p-2 navbar-brand" href="#">Suporte</a>
+			<a class="p-2 navbar-brand" href="">Início</a>
+			<a class="p-2 navbar-brand" href="">Documentação</a>
+			<a class="p-2 navbar-brand" href="">Suporte</a>
 		</nav>
-		<a class="btn btn-outline-primary" href="#">Contratar</a>
+		<a class="btn btn-outline-primary" href="">Contratar</a>
 	</div>
 </header>
 
